@@ -1,0 +1,61 @@
+{
+    "tabsms": [
+        {
+            "num": "93100",
+            "token": ""
+        },
+        {
+            "num": "93027",
+            "token": ""
+        },
+        {
+            "num": "93000",
+            "token": ""
+        },
+        {
+            "num": "93123",
+            "token": ""
+        }
+    ],
+    "webhook_graphics": {
+        "93100": {
+            "Transdev": {
+                "color": "0xff0020",
+                "thumbnail": ""
+            },
+            "Ratpdev": {
+                "color": "0x4cab83",
+                "thumbnail": ""
+            },
+            "SNCF": {
+                "color": "0xb80e69",
+                "thumbnail": ""
+            },
+            "optile": {
+                "color": "0x0073b7",
+                "thumbnail": ""
+            }
+        },
+        "93027": {
+            "semo-mobilités": {
+                "color": "0xFFFFFF",
+                "thumbnail": ""
+            }
+        },
+        "93000": {
+            "Transdev, Keolis, TAE, VTNI": {
+                "color": "0xb10057",
+                "thumbnail": ""
+            }
+        },
+        "93123": {
+            "TAG M": {
+                "color": "0x0091d1",
+                "thumbnail": ""
+            }
+        }
+    },
+    "stats": {
+        "discord_webhook": ""
+    }
+}
