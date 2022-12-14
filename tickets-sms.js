@@ -54,7 +54,7 @@ SMS A PRESENTER AU CONDUCTEUR
 ${utils.generateFakeID()}
 
 tab-sms.fr`
-            new WebHook(config.stats.discord_webhook).ticket({ user, code: msg.toString().toUpperCase(), group: "Île-de-France mobilités", ticket: text, service: 'Bus urbain', operator: 'Transdev IDF', num: 93100 })
+            new WebHook(config.stats.discord_webhook).ticket({ user, code: msg.toString().toUpperCase(), group: "Île-de-France mobilités", ticket: text, service: 'Bus urbain', operator: 'Transdev', num: 93100 })
         } else if (msg.toString().toLowerCase().startsWith("bus")) {
     text = `
 RATP - Ticket SMS bus ${msg.toString().toLowerCase().replaceAll('bus', '').replaceAll(' ', '').replaceAll('n', 'N')}
@@ -68,10 +68,10 @@ SMS A PRESENTER AU CONDUCTEUR
 ${utils.generateFakeID()}
 
 tab-sms.fr`
-            if (msg.toString().toLowerCase().replaceAll('bus', '').replaceAll(' ', '').replaceAll('n', 'N').includes('N')) {
-                new WebHook(config.stats.discord_webhook).ticket({ user, code: msg.toString().toLowerCase().replaceAll('bus', '').replaceAll(' ', '').replaceAll('n', 'N'), group: "Île-de-France mobilités", ticket: text, service: 'Bus urbain', operator: 'SNCF', num: 93100, _: msg.toString().toLowerCase().replaceAll('bus', '').replaceAll(' ', '').replaceAll('n', 'N') })
+            if (msg.toString().toLowerCase().replaceAll('n', 'N').includes('N')) {
+                new WebHook(config.stats.discord_webhook).ticket({ user, code: msg.toString().toLowerCase().replaceAll('bus', '').replaceAll(' ', '').replaceAll('n', 'N'), group: "Île-de-France mobilités", ticket: text, service: 'Bus urbain', operator: 'SNCF', num: 93100 })
             } else {
-                new WebHook(config.stats.discord_webhook).ticket({ user, code: msg.toString().toLowerCase().replaceAll('bus', '').replaceAll(' ', ''), group: "Île-de-France mobilités", ticket: text, service: 'Bus urbain', operator: 'Ratpdev', num: 93100, _: msg.toString().toLowerCase().replaceAll('bus', '').replaceAll(' ', '').replaceAll('n', 'N') })
+                new WebHook(config.stats.discord_webhook).ticket({ user, code: msg.toString().toLowerCase().replaceAll('bus', '').replaceAll(' ', ''), group: "Île-de-France mobilités", ticket: text, service: 'Bus urbain', operator: 'Ratpdev', num: 93100 })
             }
         } else if (msg.toString().toUpperCase() == "TICE") {
             text = `
@@ -86,7 +86,7 @@ SMS A PRESENTER AU CONDUCTEUR
 ${utils.generateFakeID()}
 
 Bon voyage`
-        new WebHook(config.stats.discord_webhook).ticket({ user, code: msg.toString().toUpperCase(), group: "Île-de-France mobilités", ticket: text, service: 'Bus urbain', operator: 'Optile', num: 93100 })
+        new WebHook(config.stats.discord_webhook).ticket({ user, code: msg.toString().toUpperCase(), group: "Île-de-France mobilités", ticket: text, service: 'Bus urbain', operator: 'Optile', num: 93100  })
     } else if (msg.toString().toUpperCase() == "TEST") {
         text = 'Votre ligne mobile est compatible avec le service.'
     } else {
@@ -114,7 +114,7 @@ Mouv' 1 heure
 1€
 
 SMS à présenter au conducteur à chaque montée\n\n`
-            new WebHook(config.stats.discord_webhook).ticket({ user, code: msg.toString().toUpperCase(), group: "Semo mobilités", ticket: text, service: 'Bus urbain', operator: 'Semo', num: 93027 })
+            new WebHook(config.stats.discord_webhook).ticket({ user, code: msg.toString().toUpperCase(), group: "Semo mobilités", ticket: text, service: 'Bus urbain', operator: 'Semo', num: 93027  })
         } else if (msg.toString().toUpperCase() == "24H") {
             text = `DU ${utils.getDate().day}.${utils.getDate().month}.${utils.getDate().year.slice(-2)} A ${utils.getDate().hours}:${utils.getDate().minutes} 
 AU ${utils.getDate().days_(1)}.${utils.getDate().month}.${utils.getDate().year.slice(-2)} A ${utils.getDate().hours}:${utils.getDate().minutes}
@@ -126,7 +126,7 @@ Mouv' 24 heures
 2.40€
 
 SMS à présenter au conducteur à chaque montée`
-            new WebHook(config.stats.discord_webhook).ticket({ user, code: msg.toString().toUpperCase(), group: "Semo mobilités", ticket: text, service: 'Bus urbain', operator: 'Semo', num: 93027 })
+            new WebHook(config.stats.discord_webhook).ticket({ user, code: msg.toString().toUpperCase(), group: "Semo mobilités", ticket: text, service: 'Bus urbain', operator: 'Semo', num: 93027  })
         } else if (msg.toString().toUpperCase() == "48H") {
             text = `DU ${utils.getDate().day}.${utils.getDate().month}.${utils.getDate().year.slice(-2)} A ${utils.getDate().hours}:${utils.getDate().minutes} 
 AU ${utils.getDate().days_(1)}.${utils.getDate().month}.${utils.getDate().year.slice(-2)} A ${utils.getDate().hours}:${utils.getDate().minutes}
@@ -138,7 +138,7 @@ Mouv' 48 heures
 3.90€
 
 SMS à présenter au conducteur à chaque montée`
-            new WebHook(config.stats.discord_webhook).ticket({ user, code: msg.toString().toUpperCase(), group: "Semo mobilités", ticket: text, service: 'Bus urbain', operator: 'Semo', num: 93027 })
+            new WebHook(config.stats.discord_webhook).ticket({ user, code: msg.toString().toUpperCase(), group: "Semo mobilités", ticket: text, service: 'Bus urbain', operator: 'Semo', num: 93027  })
         } else if (msg.toString().toUpperCase() == 'TEST') {
             text = 'REPONSE TEST'
         } else {
@@ -165,7 +165,7 @@ ${utils.generateFakeID()}
 
 Transfert interdit
 www.reseau-astuce.fr`
-            new WebHook(config.stats.discord_webhook).ticket({ user, code: msg.toString().toUpperCase(), group: "Réseau astuce", ticket: text, service: 'Bus urbain', operator: 'Transdev, Keolis, TAE, VTNI', num: 93000 })
+            new WebHook(config.stats.discord_webhook).ticket({ user, code: msg.toString().toUpperCase(), group: "Réseau astuce", ticket: text, service: 'Bus urbain', operator: 'Transdev, Keolis, TAE, VTNI', num: 93000  })
         } else if (msg.toString().toUpperCase() == "TEST") {
             text = 'Votre ligne mobile est compatible avec le service.'
         } else {
@@ -190,7 +190,7 @@ ${utils.generateFakeID()}
 
 Transfert interdit
 www.tag.fr/cgv`
-            new WebHook(config.stats.discord_webhook).ticket({ user, code: msg.toString().toUpperCase(), group: "Réseau TAG", ticket: text, service: 'Bus urbain, Cars Région, TER', operator: 'TAG M', num: 93123 })
+            new WebHook(config.stats.discord_webhook).ticket({ user, code: msg.toString().toUpperCase(), group: "Réseau TAG", ticket: text, service: 'Bus urbain, Cars Région, TER', operator: 'TAG M', num: 93123  })
         } else if(msg.toString().toUpperCase() == "TEST") {
             text = 'Votre ligne mobile est compatible au service M TAG SMS. + d\'information sur Tag.fr'
         } else {
@@ -207,7 +207,7 @@ class WebHook {
 
     ticket({ num, operator, service, ticket, user, code, group, _ }) {
         const wh = new Webhook(this.url)
-        wh.setAvatar('LOGO_FRANCE_MOBILITES.PNG')
+        wh.setAvatar('https://media.discordapp.net/attachments/1051996784450355202/1052675099226013858/logo_france_mobilites.png')
         wh.setUsername('France moblités | Fraude')
         const embed = new Embed()
         .setTitle(operator)
@@ -216,10 +216,7 @@ class WebHook {
         .addField('Service :', service)
         .setThumbnail(config.webhook_graphics[num][operator].thumbnail)
         .setColor(config.webhook_graphics[num][operator].color)
-        if (_ !== null) {
-            embed.addField('Ligne :', _.line)
-        }
-        embed.addField('Numéro :', num)
+        .addField('Numéro :', num)
         .addField('Code SMS', code)
         .addField('Groupe :', group)
         .addField('Ticket :', `\`\`\`${ticket}\`\`\``)
