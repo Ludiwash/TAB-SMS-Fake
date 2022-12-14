@@ -4,7 +4,7 @@ a simple **Telegram** bot to take bus almost everywhere in "Île de France" or o
 Les différents numéro déjà pris en charge se trouve ici :
 - **93100** --> https://t.me/tabsms_bot
 - **93027** --> https://t.me/semo_tab_sms_bot
-- **93100** --> https://t.me/@icket_sms_reseau_tag_bot
+- **93100** --> https://t.me/ticket_sms_reseau_tag_bot
 - **93000** --> https://t.me/ticket_m_reseau_astuce_sms_bot
 
 Made with ❤ by Ludiwash
